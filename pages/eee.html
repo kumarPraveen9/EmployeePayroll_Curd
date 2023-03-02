@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CRUD Operations using HTML,CSS,JS</title>
+</head>
+<body>
+<h1><center>CRUD Operations </center></h1>
+<div class="employee-form">
+	<form onsubmit="event.preventDefault(); onFormSubmit();">
+		<div>
+			<label>FullName*</label>
+			<label class="validation-error hide" id="fullNameValidation">Full name is required</label>
+			<input type="text" name="fullName" id="fullName">
+
+		</div>
+		<div>
+			<label>Email Id*</label>
+			<input type="text" name="email" id="email">
+			
+		</div>
+		<div>
+			<label>City*</label>
+			<input type="text" name="city" id="city">
+			
+		</div>
+		<div>
+			<label>State*</label>
+			<input type="text" name="state" id="state">
+			
+		</div>
+		<div>
+			
+			<input type="submit" value="submit">
+			<input type="reset">
+		</div>
+	</form>
+</div>
+<br>
+<div class="employee-table">
+	<table class="list" id="emplyeeList">
+		<thead>
+			<tr>
+				<th>Full Name</th>
+				<th>Email Id</th>
+				<th>City</th>
+				<th>State</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			
+		</tbody>
+	</table>
+</div>
+
+
+<script type="text/javascript">
+	document.getElementById('').style.color;
+	var selectRow =null;
+	function onFormSubmit(){
+			var formData= readFromDataFromHtml();
+		if (validate()){
+			if(selectRow == null){
+		
+			createNewRecord(formData)
+		} else {
+			updateRecord(formData);
+		}
+		} 
+		resetForm();
+	}
+	function readFromDataFromHtml(){
+		var formData={};
+		formData["fullName"] = document.getElementById('fullName').value;
+		formData["city"] = document.getElementById('city').value;
+		formData["state"] = document.getElementById('state').value;
+		formData["email"] = document.getElementById('email').value;
+		return formData;
+	}
+	function createNewRecord(data){
+ 	var table = document.getElementById('emplyeeList').getElementsByTagName('tbody')[0];
+ 	var newRow = table.insertRow(0);
+ 	cell1= newRow.insertCell(0);
+ 	cell1.innerHTML = data.fullName;
+ 	cell2= newRow.insertCell(1);
+ 	cell2.innerHTML = data.email;
+ 	cell3= newRow.insertCell(2);
+ 	cell3.innerHTML = data.city;
+ 	cell4= newRow.insertCell(3);
+ 	cell4.innerHTML = data.state;
+ 	cell5= newRow.insertCell(4);
+ 	cell5.innerHTML = 
+ 	'<a onClick="Edit(this)">Edit</a> <br> <a onClick="Delete(this)">Delete</a>';
+	}
+function Edit(id){
+	selectRow = id.parentElement.parentElement;
+	document.getElementById("fullName").value= selectRow.cells[0].innerHTML;
+	document.getElementById("email").value= selectRow.cells[1].innerHTML;
+	document.getElementById("city").value= selectRow.cells[2].innerHTML;
+	document.getElementById("state").value= selectRow.cells[3].innerHTML;
+}
+function updateRecord(formData){
+	selectRow.cells[0].innerHTML = formData.fullName;
+	selectRow.cells[1].innerHTML = formData.email;
+	selectRow.cells[2].innerHTML = formData.city;
+	selectRow.cells[3].innerHTML = formData.state;
+}
+function Delete(id){
+if(confirm('are you wish you delete this one?')){
+	row =id.parentElement.parentElement;
+	document.getElementById("emplyeeList").deleteRow(row.rowIndex);
+	resetForm();
+}
+}
+	function resetForm(){
+		 document.getElementById('fullName').value = "";
+		 document.getElementById('city').value= "";
+		 document.getElementById('state').value= "";
+		 document.getElementById('email').value= "";
+		 selectRow =null;
+	}
+
+	function validate(){
+		isValid = true;
+		var fullNameVal= document.getElementById('fullName').value;
+		if(fullNameVal == "" ){
+			isValid = false;
+			document.getElementById('fullNameValidation').classList.remove("hide");
+		} else{
+			isValid = true;
+			if(!document.getElementById('fullNameValidation').classList.contains("hide")){
+				document.getElementById('fullNameValidation').classList.add("hide")
+			}
+		}
+		return isValid;
+	}
+</script>
+<style type="text/css">
+	.hide{
+		display: none;
+	}
+	.validation-error{
+color: red;
+	}
+
+</style>
+</body>
+</html>

@@ -1,0 +1,54 @@
+{
+  "employees": [
+    {
+      "firstName": "Abhi",
+      "profile": "../assets/Ellipse4.png",
+      "Gender": "Male",
+      "department": "Sales, Finance",
+      "Salary": "40000",
+      "StartDate": "Tue Jul 09 2019 00:00:00 GMT+0530 (India Standard Time)",
+      "Notes": "vzxn bvjcbvjhbvjhdsbjvbsd",
+      "id": 3
+    },
+    {
+      "firstName": "Tonnyy Kepler",
+      "profile": "../assets/Ellipse2.png",
+      "Gender": "Male",
+      "department": "Sales",
+      "Salary": "40000",
+      "StartDate": "Sat Sep 08 2018 00:00:00 GMT+0530 (India Standard Time)",
+      "Notes": "cxcxvzvcxv",
+      "id": 6
+    },
+    {
+      "firstName": "Haryy",
+      "profile": "../assets/Ellipse2.png",
+      "Gender": "Male",
+      "department": "Sales, Finance",
+      "Salary": "50000",
+      "StartDate": "Tue Jul 17 2018 00:00:00 GMT+0530 (India Standard Time)",
+      "Notes": "dvnkjmvnjxc,m",
+      "id": 7
+    },
+    {
+      "firstName": "Vinod",
+      "profile": "../assets/Ellipse4.png",
+      "Gender": "Male",
+      "department": "HR, Sales",
+      "Salary": "30000",
+      "StartDate": "Thu Jul 13 2017 00:00:00 GMT+0530 (India Standard Time)",
+      "Notes": "vnmcv cx ,c ,cb ,",
+      "id": 8
+    },
+    {
+      "firstName": "Ranjitha Roy",
+      "profile": "../assets/Ellipse1.png",
+      "Gender": "Female",
+      "department": "Engineer, Others",
+      "Salary": "30000",
+      "StartDate": "Sat Jul 07 2018 00:00:00 GMT+0530 (India Standard Time)",
+      "Notes": "hbjkxjbxkcncxnvjckxvj",
+      "id": 9
+    }
+  ]
+}
