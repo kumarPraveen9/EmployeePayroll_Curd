@@ -85,6 +85,7 @@ function onFormSubmit()
             Notes:$('#notes').val()   //text area
 
         };
+        
 
         console.log(dta);
         $.ajax({
@@ -98,3 +99,6 @@ function onFormSubmit()
         });
     });
 
+    $("#resetButton").click(function() {
+        window.location.href='../pages/empPayroll.html';
+    });

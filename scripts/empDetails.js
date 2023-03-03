@@ -15,15 +15,15 @@ $(document).ready(function(){
                 var empStartDate = new Date(empStartDate);
               //  $('#img').attr('src', 'http://www.site.com/' + $(this).val() + '.jpg');<img src="../assets/ + ${note.profile} + .png" >
             //  'assets/images/{{wonder.id}}.jpg'
-                innerHTML+=`<tr>
-                            <td><img src='${note.profile}' ></td>
-                            <td>${note.firstName}</td>
-                            <td>${note.Gender}</td>
-                            <td>${note.department}</td>
-                            <td>${note.Salary}</td>
-                            <td>${note.StartDate}</td>
-                            <td><img width="40" height="50" id="${note.id}" src="../assets/delete.png" alt="delete" onclick="remove(this)">&nbsp&nbsp
-                            <img width="40" height="50" id="${note.id}" src="../assets/edit.png" alt="edit" onclick="update(this)"></td>
+                innerHTML+=`<tr class="UserDataRow">
+                            <td class="ProfilePicColomn"><img src='${note.profile}' ></td>
+                            <td class="UserDataText NameColomn wtt">${note.firstName}</td>
+                            <td class="UserDataText GenderColomn">${note.Gender}</td>
+                            <td class="DepartmentColomn">${note.department}</td>
+                            <td class="UserDataText SalaryColomn">${note.Salary}</td>
+                            <td class="UserDataText StartDateColomn">${note.StartDate}</td>
+                            <td class="ActionsColomn"><img width="30" height="30" id="${note.id}" src="../assets/delete.png" alt="delete" onclick="remove(this)">&nbsp&nbsp
+                            <img width="30" height="30" id="${note.id}" src="../assets/edit.png" alt="edit" onclick="update(this)"></td>
                             
                             </tr>`;
               }
@@ -61,3 +61,5 @@ function update(ctl){
   localStorage.setItem("id",id);
   window.location.href="../pages/edit.html";
 }
+
+

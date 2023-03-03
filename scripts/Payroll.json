@@ -2,10 +2,10 @@
   "employees": [
     {
       "firstName": "Haryy",
-      "profile": "../assets/Ellipse4.png",
-      "Gender": "Male",
+      "profile": "../assets/Ellipse2.png",
+      "Gender": "Female",
       "department": "Sales, Finance",
-      "Salary": "50000",
+      "Salary": "40000",
       "StartDate": "1 Jan 2021",
       "Notes": "dvnkjmvnjxc,m",
       "id": 7
@@ -99,6 +99,16 @@
       "StartDate": "13 Jun 2017",
       "Notes": "I am doing..",
       "id": 18
+    },
+    {
+      "firstName": "David",
+      "profile": "../assets/Ellipse4.png",
+      "Gender": "Male",
+      "department": "Finance, Others",
+      "Salary": "40000",
+      "StartDate": "16 Aug 2017",
+      "Notes": "hey hi ho say!!",
+      "id": 19
     }
   ]
 }

@@ -118,3 +118,6 @@ function updateData() {
     });
 }
 
+$("#resetButton").click(function() {
+    window.location.href='../pages/empPayroll.html';
+});

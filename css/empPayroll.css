@@ -304,3 +304,28 @@ error-output{
         align-items: flex-start;
     }
 }
+
+.grey:hover 
+{
+    background-color: rgb(78, 77, 77);
+    color: white;
+}
+
+.sb_btn:hover{
+
+    background-color: #82A70C;
+    color: white;
+
+}
+
+.g_btn
+{
+    height: 59px;
+    width: 185px;
+}
+
+.s_btn
+{
+    height: 59px;
+    width: 185px;
+}

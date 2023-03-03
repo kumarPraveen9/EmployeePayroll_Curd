@@ -1,79 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/empDetails.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;1,500&display=swap"
-    rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <title>Employee Payroll App</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>Employee Registration</title>
+    <link rel="stylesheet" href="../css/empDetails.css">
 </head>
-
 <body>
-  <!-- UC 1 -->
-  <header class="header-content header wdth">
-    <div class="logo-content">
-      <img src="../assets/logo.png" alt="logo">
-      <div>
-        <span class="emp-text">EMPLOYEE</span><br>
-        <span class="emp-text emp-payroll">PAYROLL</span>
-      </div>
-    </div>
-  </header>
+    <header class="Header">
+        <div class="InsideHeader">
+            <img src="../assets/logo.png" alt="Logo">
+            <div>
+                <span class="LogoText TextEmployee">EMPLOYEE</span><br>
+                <span class="LogoText">PAYROLL</span>
+            </div>
+        </div>
+    </header>
 
-  <!-- UC 2 -->
-  <div class="main-content">
-    <div class="header-content employee-header">
-      <div class="emp-detail-text">
-        Employee Details
-        <div class="emp-count">10</div>
-      </div>
-      <div class="btn_">
-      <a href="..\pages\empPayroll.html" class="add-button btttn">
-        <img src="../assets/plu" alt="">Add User
-      </a>
-    </div>
+    <div class="TitleAndButtonsParent">
+        <div class="TitleAndButtons">
+            <span class="TitleEMPdetails">Employee Details</span>
+            <div class="SearchandAddButtons">
+                <button class="searchButton"type="search"><img src="../assets/icons8-search.svg" alt="Search"></button>
+                <button class="addUserButton" type="add" id="addUserr"><img class="addButtonImage" src="../assets/add-24px.svg" alt="Add"><span class="addUserText"><a href="..\pages\empPayroll.html">Add User</a></span></button>
+            </div>
+        </div>
     </div>
 
-    <!-- UC 3 -->
-    <div style="margin-left: 10%;" class="table-main wdt">
-      
-    
-     
-     <table class="table wdt" id="employeeList">
-      
-      <thead>
-        <tr style="height: 66px;">
-          <th class="tab_name"></th>
-          <th class="tab_name">NAME</th>
-          <th class="tab_gender">GENDER</th>
-          <th class="tab_dept">DEPARTMENT</th>
-          <th class="tab_salary">SALARY</th>
-          <th class="tab_date">START DATE</th>
-          <th class="tab_act">ACTIONS</th>
-          </tr>
-      </thead>
-    
-      
-      <tbody class="tbd">
-      
-      </tbody>
-    
-  </table>
-          
-     
+    <div class="DetailsContentParent">
+        <div class="DetailsContent">
+            <table class="MainTable" id="employeeList">
+              <thead>
+                <tr class="TableHeadders">
+                    <th class="ProfilePicColomn"></th>
+                    <th class="TableHeaderTextStyle NameColomn wdtt">NAME</th>
+                    <th class="TableHeaderTextStyle GenderColomn">GENDER</th>
+                    <th class="TableHeaderTextStyle DepartmentColomn">DEPARTMENT</th>
+                    <th class="TableHeaderTextStyle SalaryColomn">SALARY</th>
+                    <th class="TableHeaderTextStyle StartDateColomn">START DATE</th>
+                    <th class="TableHeaderTextStyle ActionsColomn">ACTIONS</th>
+                </tr>
+              </thead>
+              <tbody class="tbd">
+
+              </tbody>
+                
+            </table>
+        </div>
     </div>
-  </div>
-   <script src="../scripts/empDetails.js"></script>
- <!-- <script src="../js/utility.js"></script>
-  <script src="../js/site_properties.js"></script>
-  <script src="../js/EmployeePayrollData.js"></script> -->
+    <script src="../scripts/empDetails.js"></script>
 </body>
-
 </html>
