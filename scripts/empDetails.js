@@ -12,7 +12,7 @@ $(document).ready(function(){
 
               for(const note of notesArray){
                 console.log(note.id);
-
+                var empStartDate = new Date(empStartDate);
               //  $('#img').attr('src', 'http://www.site.com/' + $(this).val() + '.jpg');<img src="../assets/ + ${note.profile} + .png" >
             //  'assets/images/{{wonder.id}}.jpg'
                 innerHTML+=`<tr>

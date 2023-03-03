@@ -73,7 +73,7 @@ function onFormSubmit()
              var day = $('#day').val();
              var month = $('#month').val();
              var year = $('#year').val();
-             var empStartDate = new Date(year,month,day);
+            // var empStartDate = new Date(year,month,day);
            
         let dta={
             firstName:$('#name').val(),      
@@ -81,7 +81,7 @@ function onFormSubmit()
             Gender: $('input[name="gender"]:checked').val(),   //radio
             department:selectedValues,
             Salary:$('#salary').val(),   //seclect option
-            StartDate:empStartDate,    //select option
+            StartDate:day+' '+month+' '+year,    //select option
             Notes:$('#notes').val()   //text area
 
         };
