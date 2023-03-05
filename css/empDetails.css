@@ -210,6 +210,10 @@ margin-top: 15px;
     color: #3D3D3D;
     margin-right: 6px;
 }
+.srch{
+    border-radius: 45px;
+    border-color:transparent ;
+}
 
 .UserDataActions
 {
