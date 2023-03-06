@@ -1,39 +1,138 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
     <title>Json filter example</title>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script>
        var dt={
-    "employees": [
-      {
-        "firstName": "Haryy",
-        "profile": "../assets/Ellipse2.png",
-        "Gender": "Female",
-        "department": "Sales, Finance",
-        "Salary": "40000",
-        "StartDate": "1 Jan 2021",
-        "Notes": "dvnkjmvnjxc,m",
-        "id": 7
-      },
-      {
-        "firstName": "Vinod",
-        "profile": "../assets/Ellipse3.png",
-        "Gender": "Male",
-        "department": "HR, Sales",
-        "Salary": "30000",
-        "StartDate": "13 Jul 2017",
-        "Notes": "vnmcv cx ,c ,cb ,",
-        "id": 8
-      }]};
+  "employees": [
+    {
+      "firstName": "Haryy",
+      "profile": "../assets/Ellipse2.png",
+      "Gender": "Female",
+      "department": "Sales, Finance",
+      "Salary": "40000",
+      "StartDate": "1 Jan 2021",
+      "Notes": "dvnkjmvnjxc,m",
+      "id": 7
+    },
+    {
+      "firstName": "Vinod",
+      "profile": "../assets/Ellipse3.png",
+      "Gender": "Male",
+      "department": "HR, Sales",
+      "Salary": "30000",
+      "StartDate": "13 Jul 2017",
+      "Notes": "vnmcv cx ,c ,cb ,",
+      "id": 8
+    },
+    {
+      "firstName": "Ranjitha Roy",
+      "profile": "../assets/Ellipse2.png",
+      "Gender": "Female",
+      "department": "Engineer, Others",
+      "Salary": "30000",
+      "StartDate": "4 Jun 2018",
+      "Notes": "hbjkxjbxkcncxnvjckxvj",
+      "id": 9
+    },
+    {
+      "firstName": "Nayathi",
+      "profile": "../assets/Ellipse1.png",
+      "Gender": "Female",
+      "department": "Sales, Engineer",
+      "Salary": "40000",
+      "StartDate": "7 May 2019",
+      "Notes": "dvsdfdngfnmhvb",
+      "id": 11
+    },
+    {
+      "firstName": "Rashmitha A",
+      "profile": "../assets/Ellipse1.png",
+      "Gender": "Female",
+      "department": "HR, Sales, Finance",
+      "Salary": "30000",
+      "StartDate": "19 Dec 2016",
+      "Notes": "Hey Ho Say",
+      "id": 12
+    },
+    {
+      "firstName": "sandeep",
+      "profile": "../assets/Ellipse3.png",
+      "Gender": "Male",
+      "department": "Engineer, Others",
+      "Salary": "40000",
+      "StartDate": "13 Jan 2018",
+      "Notes": "bcjhxzbjxbzcbzxhj",
+      "id": 14
+    },
+    {
+      "firstName": "Pranavi",
+      "profile": "../assets/Ellipse2.png",
+      "Gender": "Female",
+      "department": "HR, Sales",
+      "Salary": "40000",
+      "StartDate": "15 6 2018",
+      "Notes": "ckbckjbckcxc",
+      "id": 15
+    },
+    {
+      "firstName": "Hayathi",
+      "profile": "../assets/Ellipse2.png",
+      "Gender": "Female",
+      "department": "Finance, Engineer",
+      "Salary": "60000",
+      "StartDate": "8 Jul 2017",
+      "Notes": "zvdxvdxbcn gb",
+      "id": 16
+    },
+    {
+      "firstName": "Aarta",
+      "profile": "../assets/Ellipse2.png",
+      "Gender": "Male",
+      "department": "Sales, Finance",
+      "Salary": "30000",
+      "StartDate": "1 May 2021",
+      "Notes": "bczxmc,xzmnxzkncxz",
+      "id": 17
+    },
+    {
+      "firstName": "Naveen ",
+      "profile": "../assets/Ellipse4.png",
+      "Gender": "Male",
+      "department": "Sales, Engineer, Others",
+      "Salary": "50000",
+      "StartDate": "13 Jun 2017",
+      "Notes": "I am doing..",
+      "id": 18
+    },
+    {
+      "firstName": "David",
+      "profile": "../assets/Ellipse4.png",
+      "Gender": "Male",
+      "department": "Finance, Others",
+      "Salary": "40000",
+      "StartDate": "16 Aug 2017",
+      "Notes": "hey hi ho say!!",
+      "id": 19
+    }
+  ]
+};
+
+
+
 
       $(document).ready(function () {
             filterjson();
         });
+console.log(dt);
+
         function filterjson() {
    var res = $.grep(dt.employees, function (n, i) {
     return n.firstName.toLowerCase().indexOf($("#txtbrandinput").val().toLowerCase()) > -1;
 });
+
+console.log(res);
             var outputstr = "<table style='border:solid 1px #000; border-collapse:collapse;' border='1' cellpadding='5'><thead><th>Brand</th><th>Gender</th></thead>";
             $.each(res, function (i, n) {
                 outputstr += "<tr><td>" + n.firstName + "</td><td>" + n.Gender + "</td></tr>";
@@ -52,4 +151,4 @@
         </div>
     </div>
 </body>
-</html>
+</html> -->

@@ -78,14 +78,20 @@ function filterjson() {
     success: function (result) {
       console.log(result);
       var innerHTML = "";
-      let dt = result;
+      var dt = result;
       console.log(dt);
-
-      var res = $.grep(dt.employees, function (n, i) {
-        return n.firstName.toLowerCase().indexOf($("#Searchinput").val().toLowerCase()) > -1;
+     
+     
+      var returnedData  = $.grep(dt, function (element,i) {
+       
+        return element.firstName.toLowerCase().indexOf($("#Searchinput").val().toLowerCase()) > -1 ;
       });
+
+      console.log(returnedData);
+
+      
     //  var outputstr = "<table style='border:solid 1px #000; border-collapse:collapse;' border='1' cellpadding='5'><thead><th>Brand</th><th>Gender</th></thead>";
-      $.each(res, function (i, n) {
+    for (const note of returnedData ) {
         innerHTML += `<tr class="UserDataRow">
         <td class="ProfilePicColomn"><img src='${note.profile}' ></td>
         <td class="UserDataText NameColomn wtt">${note.firstName}</td>
@@ -97,8 +103,9 @@ function filterjson() {
         <img width="30" height="30" id="${note.id}" src="../assets/edit.png" alt="edit" onclick="update(this)"></td>
         
         </tr>`;
-      });
-      $("#employeeList").append(innerHTML);
+      }
+      console.log(innerHTML);
+      $("#employeeList").html(innerHTML);
 
     },
     error: function (error) {
