@@ -1,3 +1,4 @@
+window.global_result;
 $(document).ready(function () {
 
   $.ajax({
@@ -6,6 +7,7 @@ $(document).ready(function () {
 
     success: function (result) {
       console.log(result);
+      global_result=result;
       var innerHTML = "";
       let notesArray = result;
       console.log(notesArray);
@@ -71,15 +73,11 @@ function update(ctl) {
 // }
 
 function filterjson() {
-  $.ajax({
-    url: "http://localhost:3000/employees",
-    type: "GET",
-
-    success: function (result) {
-      console.log(result);
+ 
       var innerHTML = "";
-      var dt = result;
-      console.log(dt);
+      var dt = global_result;
+      console.log(global_result);
+      
      
      
       var returnedData  = $.grep(dt, function (element,i) {
@@ -107,12 +105,9 @@ function filterjson() {
       console.log(innerHTML);
       $("#employeeList").html(innerHTML);
 
-    },
-    error: function (error) {
-      console.log(`Error ${error}`);
-    },
+   
 
 
-  });
-}
+  };
+
 
